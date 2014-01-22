@@ -1,0 +1,23 @@
+<h3>Add a Creature:</h3>
+
+<form action="/creatures" method="post">
+  Nickname: <br />
+  <input type="text" name="creature[name]">
+  <br />
+  Animal Type: <br />
+  <input type="text" name="creature[animal_type]">
+  <br />
+  Color: <br />
+  <input type="text" name="creature[color]">
+  <br />
+  Size: XS / S / M / L / XL: <br />
+  <input type="text" name="creature[size]">
+  <br />
+  Description: <br />
+  <textarea name="creature[description]"></textarea>
+  <br />
+
+  <%= token_tag form_authenticity_token %>
+
+  <button>Submit Creature</button>
+</form>
