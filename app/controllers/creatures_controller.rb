@@ -5,4 +5,12 @@ class CreaturesController < ApplicationController
     render :index
   end
 
+  def all
+
+    render :creatures
+  end
+
+
+
+
 end
