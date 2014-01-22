@@ -1,0 +1,22 @@
+<h3> Update This Creature:</h3>
+
+<form action="/creatures/<%=@creature.id%>" method="post">
+<input type="hidden" name="_method" value="put">
+  Nickname: <br />
+  <input type="text" name="creature[name]" value="<%= @creature.name%>">
+  <br />
+  Animal Type: <br />
+  <input type="text" name="creature[animal_type]" value="<%= @creature.animal_type%>">
+  <br />
+  Color: <br />
+  <input type="text" name="creature[color]" value="<%= @creature.color%>">
+  <br />
+  Size: XS / S / M / L / XL: <br />
+  <input type="text" name="creature[size]" value="<%= @creature.size %>">
+  <br />
+  Description: <br />
+  <textarea name="creature[description]"><%= @creature.description %></textarea>
+  <br />
+  <%= token_tag form_authenticity_token %>
+  <button>Update Creature</button>
+</form>
